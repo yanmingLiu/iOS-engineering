@@ -1,0 +1,15 @@
+//
+//  DebugProject.xcconfig
+//  iOS-environment
+//
+//  Created by lym on 2023/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "../Pods/Target Support Files/Pods-iOS-engineering/Pods-iOS-engineering.debug.xcconfig"
+
+#include "Common.xcconfig"
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) DEBUG

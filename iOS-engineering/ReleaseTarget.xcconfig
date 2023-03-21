@@ -1,0 +1,12 @@
+//
+//  ReleaseTarget.xcconfig
+//  iOS-environment
+//
+//  Created by lym on 2023/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = $(inherited) β
+PRODUCT_BUNDLE_IDENTIFIER = com.lym.io.internal

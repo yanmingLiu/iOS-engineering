@@ -22,6 +22,7 @@
 		380E645529C93CD4008AB134 /* iOS-engineering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-engineering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		380E684929C981F7008AB134 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3887DEA529C9BFC50095DF2C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		3887DF0029CD54830095DF2C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38A17F1E29C9AD4A0058F427 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38A17F2229C9AD4A0058F427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A17F2529C9AD4A0058F427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,9 +65,9 @@
 		0DF0AF862393B5B4F2EE7E5B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				9097AA0C018BBB2A07E4AE97 /* Pods-iOS-engineering.appstore.xcconfig */,
 				6636A90569A270416919C614 /* Pods-iOS-engineering.debug.xcconfig */,
 				617A91AA0DCF89E3B1357AEC /* Pods-iOS-engineering.release.xcconfig */,
-				9097AA0C018BBB2A07E4AE97 /* Pods-iOS-engineering.appstore.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -76,6 +77,7 @@
 			children = (
 				380E684929C981F7008AB134 /* README.md */,
 				3887DEA529C9BFC50095DF2C /* R.generated.swift */,
+				3887DF0029CD54830095DF2C /* .swiftlint.yml */,
 				38A17F1D29C9AD4A0058F427 /* iOS-engineering */,
 				380E645629C93CD4008AB134 /* Products */,
 				0DF0AF862393B5B4F2EE7E5B /* Pods */,
@@ -91,17 +93,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3887DF0229CD5DB90095DF2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38A17F2229C9AD4A0058F427 /* Assets.xcassets */,
+				38A17F2429C9AD4A0058F427 /* LaunchScreen.storyboard */,
+				38A17F2629C9AD4A0058F427 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		38A17F1D29C9AD4A0058F427 /* iOS-engineering */ = {
 			isa = PBXGroup;
 			children = (
 				38A17F3C29C9AD740058F427 /* Config */,
-				38A17F1E29C9AD4A0058F427 /* ViewController.swift */,
-				38A17F2229C9AD4A0058F427 /* Assets.xcassets */,
-				38A17F2429C9AD4A0058F427 /* LaunchScreen.storyboard */,
-				38A17F2629C9AD4A0058F427 /* Main.storyboard */,
+				3887DF0229CD5DB90095DF2C /* Resources */,
 				38A17F2B29C9AD4A0058F427 /* AppDelegate.swift */,
 				38A17F2C29C9AD4A0058F427 /* Info.plist */,
 				38A17F2D29C9AD4A0058F427 /* SceneDelegate.swift */,
+				38A17F1E29C9AD4A0058F427 /* ViewController.swift */,
 			);
 			path = "iOS-engineering";
 			sourceTree = "<group>";
@@ -130,6 +140,7 @@
 				0B6CDC3F822DAAB4563A1683 /* [CP] Check Pods Manifest.lock */,
 				380E67FF29C96ED5008AB134 /* ShellScript */,
 				380E645129C93CD4008AB134 /* Sources */,
+				3887DEC329CD40880095DF2C /* ShellScript */,
 				380E645229C93CD4008AB134 /* Frameworks */,
 				380E645329C93CD4008AB134 /* Resources */,
 				09DFB90CD39139B8D5A7B011 /* [CP] Embed Pods Frameworks */,
@@ -181,9 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A17F3529C9AD4B0058F427 /* Main.storyboard in Resources */,
 				38A17F3229C9AD4B0058F427 /* Assets.xcassets in Resources */,
 				38A17F3429C9AD4B0058F427 /* LaunchScreen.storyboard in Resources */,
+				38A17F3529C9AD4B0058F427 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +259,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
+		3887DEC329CD40880095DF2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,9 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A17F3929C9AD4B0058F427 /* AppDelegate.swift in Sources */,
-				38A17F2E29C9AD4B0058F427 /* ViewController.swift in Sources */,
-				38A17F3B29C9AD4B0058F427 /* SceneDelegate.swift in Sources */,
 				3887DEA629C9BFC50095DF2C /* R.generated.swift in Sources */,
+				38A17F3B29C9AD4B0058F427 /* SceneDelegate.swift in Sources */,
+				38A17F2E29C9AD4B0058F427 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

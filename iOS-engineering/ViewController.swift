@@ -9,14 +9,12 @@ import UIKit
 import YMExtension
 
 class ViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-                
         environment()
     }
-    
+
     func environment() {
         let appBundleID = Bundle.ext.appBundleID
         let appDisplayName = Bundle.ext.appDisplayName
@@ -38,7 +36,7 @@ class ViewController: UIViewController {
         print("evn = \(evn)")
         
         let icon = UIImageView()
-        icon.image = R.image.icon_personal_about()!
+        icon.image = R.image.icon_personal_about()
         view.addSubview(icon)
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -62,4 +60,3 @@ class ViewController: UIViewController {
         """
     }
 }
-

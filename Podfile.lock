@@ -15,6 +15,7 @@ PODS:
     - Alamofire (~> 5.0)
   - R.swift (7.3.0)
   - SnapKit (5.6.0)
+  - SwiftLint (0.50.3)
   - SwiftyAttributes (5.1.1)
   - YMExtension (0.2.3)
 
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Moya (= 15.0.0)
   - R.swift (= 7.3.0)
   - SnapKit (= 5.6.0)
+  - SwiftLint
   - SwiftyAttributes (= 5.1.1)
   - YMExtension
 
@@ -45,6 +47,7 @@ SPEC REPOS:
     - Moya
     - R.swift
     - SnapKit
+    - SwiftLint
     - SwiftyAttributes
     - YMExtension
 
@@ -60,9 +63,10 @@ SPEC CHECKSUMS:
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   R.swift: cef1c530541cb49412752721797f10dae6b32d11
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
   YMExtension: dd112797db7afb43a4ec9f420e2c42c0f99c6ba4
 
-PODFILE CHECKSUM: d688c6aeb98d4dfbd076c60408b50ae2f10c7431
+PODFILE CHECKSUM: 3aabd5b2e7ef8afe49b3111f95a4ecaf6d989169
 
 COCOAPODS: 1.11.3

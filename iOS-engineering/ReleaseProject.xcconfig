@@ -12,4 +12,9 @@
 
 #include "Common.xcconfig"
 
+// 条件编译所用到的变量定义 #if DEBUG  #if RELEASE  #if APPSTORE
+// OC 都是通过：GCC_PREPROCESSOR_DEFINITIONS的Preprocessor Macros去定义的；
+// 后来swift中 用SWIFT_ACTIVE_COMPILATION_CONDITIONS的Active Compilation Conditions去定义变量XXX即可（不需要加-D）。
+// 相当于手动在build configuartion中，先点"+"号，然后选择Add User-Defined Setting
+
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) RELEASE

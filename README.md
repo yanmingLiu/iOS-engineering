@@ -134,7 +134,7 @@ Apple官网： https://help.apple.com/xcode/mac/11.4/#/dev745c5c974
 
 ### 🔥🔥🔥 关于PRODUCT_BUNDLE_IDENTIFIER设置后不生效的问题？很多国内的网上说不能用xcconfig来配置，这是不正确的。
 
-如果您要更改xcconfig中 PRODUCT_BUNDLE_IDENTIFIER 的值，您将看不到构建设置中反映的更改。那是因为包标识符当前在目标设置中是硬编码的。要解决此问题，请返回项目编辑器并选择 iOS-engineering Target。在build settings中搜索bundle字段，找到Product Bundle Identifier,将指改为：
+如果您要更改xcconfig中 PRODUCT_BUNDLE_IDENTIFIER 的值，您将看不到构建设置中反映的更改。那是因为包标识符当前在目标设置中是硬编码的。要解决此问题，请返回项目编辑器并选择 iOS-engineering Target。在build settings中搜索bundle字段，找到Product Bundle Identifier,将值改为：
 ```
 $(PRODUCT_BUNDLE_IDENTIFIER)
 ```
@@ -143,6 +143,16 @@ $(PRODUCT_BUNDLE_IDENTIFIER)
 ```
 $(APP_NAME)
 ```
+
+### 🔥🔥🔥 同样关于APP Version 和 build Version用xcconfig来管理, 要解决此问题，请返回项目编辑器并选择 iOS-engineering Target。在build settings中搜索version字段，找到Current Project Version,将值改为Common.xcconfig中的字段：
+```
+$(PRODUCT_VERSION_BASE)
+```
+找到Marketing Version,将值改为Common.xcconfig中的字段：
+```
+$(PRODUCT_VERSION_SUFFIX)
+```
+
 
 注意：当您从Info.plist或.entitlements文件中引用构建设置时，您使用相同的引用语法。$(xxx)
 

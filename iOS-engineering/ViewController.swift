@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     func environment() {
         let appBundleID = Bundle.ext.appBundleID
         let appDisplayName = Bundle.ext.appDisplayName
+        let appVersion = Bundle.ext.appVersion
+        let appBuildVersion = Bundle.ext.appBuildVersion
         print("appBundleID = \(appBundleID)")
         print("appDisplayName = \(appDisplayName)")
         
@@ -57,6 +59,8 @@ class ViewController: UIViewController {
                 BundleID = \(appBundleID)
                 DisplayName = \(appDisplayName)
                 evn = \(evn)
+                appVersion = \(appVersion)
+                appBuildVersion = \(appBuildVersion)
         """
     }
 }

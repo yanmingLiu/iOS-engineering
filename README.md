@@ -144,11 +144,11 @@ $(PRODUCT_BUNDLE_IDENTIFIER)
 $(APP_NAME)
 ```
 
-### 🔥🔥🔥 同样关于APP Version 和 build Version用xcconfig来管理, 要解决此问题，请返回项目编辑器并选择 iOS-engineering Target。在build settings中搜索version字段，找到Current Project Version,将值改为Common.xcconfig中的字段：
+### 🔥🔥🔥 同样关于APP Version 和 build Version用xcconfig来管理, 要解决此问题，请返回项目编辑器并选择 iOS-engineering Target -> General -> identity里面。将Version和Build的值分别改为Common.xcconfig中的字段：
 ```
 $(PRODUCT_VERSION_BASE)
 ```
-找到Marketing Version,将值改为Common.xcconfig中的字段：
+
 ```
 $(PRODUCT_VERSION_SUFFIX)
 ```
